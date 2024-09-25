@@ -199,7 +199,7 @@ app.frame("/intro", async (c) => {
                 whiteSpace: "pre-wrap",
               }}
             >
-              You can only use Yoink-Ching once every 10 minutes. Check back
+              You can only use Yoink-Ching once every 10 seconds. Check back
               soon!
             </div>
           </div>
