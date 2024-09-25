@@ -505,7 +505,7 @@ app.transaction("/approve", (c) => {
   return c.contract({
     abi: MoxieABI,
     functionName: "approve",
-    args: [process.env.YOINK_ADDRESS as `0x${string}`, ethers.MaxUint256],
+    args: [process.env.YOINK_ADDRESS as `0x${string}`, ethers.parseEther("10")],
     chainId: "eip155:8453",
     to: process.env.MOXIE_ADDRESS as `0x${string}`,
     value: BigInt(0),
