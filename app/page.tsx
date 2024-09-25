@@ -18,7 +18,7 @@ export default function Home() {
       <h1 className={styles.title}>Yoink-Ching!</h1>
       <div className={styles.linksTitle}>Links</div>
       <div className={styles.links}>
-        <a href="https://warpcast.com/sumaa">Yoink On Warpcast</a>
+        <a href="https://warpcast.com/sumaa/0x2769eec9">Yoink On Warpcast</a>
         <a href="https://github.com/0xSumaa/Yoink-Ching-Contracts">
           Contracts Github
         </a>

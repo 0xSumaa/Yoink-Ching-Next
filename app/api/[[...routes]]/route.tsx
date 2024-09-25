@@ -38,7 +38,7 @@ const app = new Frog<{ State: State }>({
   assetsPath: "/",
   basePath: "/api",
   title: "Yoink-Ching",
-  browserLocation: "https://warpcast.com/sumaa",
+  browserLocation: "https://warpcast.com/sumaa/0x2769eec9",
 }).use(
   neynar({
     apiKey: process.env.NEYNAR_FROG_FM as string,
