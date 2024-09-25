@@ -199,7 +199,8 @@ app.frame("/intro", async (c) => {
                 whiteSpace: "pre-wrap",
               }}
             >
-              You are Yoinking too much ser! One yoink every 10 minutes.
+              You can only use Yoink-Ching once every 10 minutes. Check back
+              soon!
             </div>
           </div>
         ),
