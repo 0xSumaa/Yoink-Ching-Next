@@ -41,7 +41,7 @@ export const getHolderState = async (walletAddress: string) => {
       ]);
     return { holderState, contractBalance, userBalance, sufficientApproval };
   } catch (error) {
-    console.log(error);
+    console.log("error", error);
     throw new Error("Error fetching holder state");
   }
 };

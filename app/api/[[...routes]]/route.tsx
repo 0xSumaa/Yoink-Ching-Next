@@ -162,7 +162,7 @@ app.frame("/", async (c) => {
 app.frame("/intro", async (c) => {
   try {
     const fid = c.var.interactor?.fid;
-    console.log("fid", fid);
+
     if (!fid) {
       return c.error({
         message: "Error fetching fid",
@@ -171,7 +171,6 @@ app.frame("/intro", async (c) => {
     }
 
     const canProceed = await checkRateLimit(fid.toString());
-    console.log("canProceed", canProceed);
 
     if (!canProceed) {
       return c.res({
@@ -213,7 +212,6 @@ app.frame("/intro", async (c) => {
       (c.var.interactor?.custodyAddress as string);
     const { holderState, contractBalance, userBalance, sufficientApproval } =
       await getHolderState(walletAddress);
-    console.log("holderState", holderState);
     c.deriveState((previousState) => {
       previousState.contractBalance = contractBalance;
       previousState.userBalance = userBalance;
