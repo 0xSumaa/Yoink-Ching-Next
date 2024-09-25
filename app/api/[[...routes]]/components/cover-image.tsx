@@ -1,11 +1,17 @@
 import React from "react";
 import { formatBalance } from "../utils/format";
 
-const CoverImage: React.FC<{
-  balance: string;
+interface GameStatusProps {
   gameInProgress: boolean;
+  contractBalance: string;
   holderAddy: string;
-}> = ({ balance, gameInProgress, holderAddy }): JSX.Element => {
+}
+
+const CoverImage: React.FC<GameStatusProps> = ({
+  gameInProgress,
+  contractBalance,
+  holderAddy,
+}) => {
   return (
     <div
       style={{
@@ -51,7 +57,8 @@ const CoverImage: React.FC<{
               whiteSpace: "pre-wrap",
             }}
           >
-            yoink and hodl for 24 hours to win {formatBalance(balance)} MOXIE
+            yoink and hodl for 24 hours to win {formatBalance(contractBalance)}{" "}
+            MOXIE
           </div>
         </>
       ) : (
@@ -89,7 +96,7 @@ const CoverImage: React.FC<{
         </>
       )}
     </div>
-  );
+  ) as JSX.Element;
 };
 
 export default CoverImage;

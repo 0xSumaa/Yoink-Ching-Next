@@ -39,9 +39,9 @@ export const addCommas = (numStr: string): string => {
 };
 
 export const adjustBalance = (
-  balance: BigInt,
+  balance: string,
   decimals: number = 18
 ): number => {
-  const formatted = ethers.formatUnits(balance.toString(), decimals);
+  const formatted = ethers.formatUnits(balance, decimals);
   return parseFloat(formatted);
 };

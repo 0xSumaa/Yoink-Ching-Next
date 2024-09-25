@@ -13,13 +13,13 @@ export const hasEnoughApproved = async (address: string): Promise<boolean> => {
     MoxieABI
   );
 
-  const approvalAmount = await moxieContract.allowance(
+  const approvalAmount: BigInt = await moxieContract.allowance(
     address,
     process.env.YOINK_ADDRESS as string
   );
   const tenTokens = ethers.parseUnits("10", 18);
 
-  if (approvalAmount.gte(tenTokens)) {
+  if (BigInt(approvalAmount.toString()) >= BigInt(tenTokens.toString())) {
     return true;
   }
 
