@@ -505,7 +505,7 @@ app.transaction("/approve", (c) => {
     abi: MoxieABI,
     functionName: "approve",
     args: [process.env.YOINK_ADDRESS as `0x${string}`, ethers.MaxUint256],
-    chainId: "eip155:11155111",
+    chainId: "eip155:8453",
     to: process.env.MOXIE_ADDRESS as `0x${string}`,
     value: BigInt(0),
   });
@@ -516,7 +516,7 @@ app.transaction("/yoink-flag", (c) => {
     abi: YoinkABI,
     functionName: "yoink",
     args: [],
-    chainId: "eip155:11155111",
+    chainId: "eip155:8453",
     to: process.env.YOINK_ADDRESS as `0x${string}`,
     value: BigInt(0),
   });
@@ -527,7 +527,7 @@ app.transaction("/claim", (c) => {
     abi: YoinkABI,
     functionName: "yoink",
     args: [],
-    chainId: "eip155:11155111",
+    chainId: "eip155:8453",
     to: process.env.YOINK_ADDRESS as `0x${string}`,
     value: BigInt(0),
   });
